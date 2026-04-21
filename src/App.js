@@ -36,7 +36,7 @@ const App = () => {
     const response = await fetch('https://api.hubapi.com/crm/v3/objects/contacts', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer pat-na1-58f8836b-43fc-4db0-abbf-3cc89f3d64be`,
+        'Authorization': `Bearer ${process.env.REACT_APP_TOKEN}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
